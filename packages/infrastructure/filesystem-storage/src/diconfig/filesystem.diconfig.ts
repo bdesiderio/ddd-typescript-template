@@ -1,8 +1,5 @@
-import { DIService, IUserRepository, IUserRepositorySymbol } from "example-domain-core";
-import { UserRepository } from "../repositories/user.repository";
-
-export class FilesysteDIConfig {
+export class FilesystemDIConfig {
     static init() {
-        DIService.container.bind<IUserRepository>(IUserRepositorySymbol).to(UserRepository);
+        console.log("Infrastructure FilesSystemDI Configured");
     }
 }

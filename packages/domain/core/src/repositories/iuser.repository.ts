@@ -1,5 +1,6 @@
 import { User } from "../models/user";
 import { injectable } from "inversify";
+
 const TYPE = Symbol.for("IUserRepository");
 
 interface IUserRepository {

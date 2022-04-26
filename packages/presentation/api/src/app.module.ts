@@ -1,15 +1,15 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PublisherService  } from "example-application";
+import { Mediator } from "@extrimian/core";
 
 @Module({
   imports: [],
   controllers: [AppController],
   providers: [AppService,
     {
-      provide: PublisherService,
-      useClass: PublisherService
+      provide: Mediator,
+      useClass: Mediator
     }],
 })
 export class AppModule { }
