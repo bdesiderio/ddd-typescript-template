@@ -1,6 +1,6 @@
 import { Container } from "inversify";
 import { ICommand } from "../cqrs/icommand";
-import { ICommandHandler } from "../cqrs/ihandler";
+import { ICommandHandler } from "../cqrs/icommand.handler";
 
 export class DIService {
     static container = new Container();
@@ -9,6 +9,6 @@ export class DIService {
         TCommandHandler extends ICommandHandler<TCommand, TResult>>(
             command: new (...args: never[]) => TCommand,
             handler: new (...args: never[]) => TCommandHandler) {
-        DIService.container.bind<TCommandHandler>(command.name).to(handler);        
+        DIService.container.bind<TCommandHandler>(command.name).to(handler);
     }
 }

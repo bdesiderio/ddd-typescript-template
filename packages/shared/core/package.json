@@ -1,5 +1,5 @@
 {
-  "name": "@extrimian/core",
+  "name": "@shared/core",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

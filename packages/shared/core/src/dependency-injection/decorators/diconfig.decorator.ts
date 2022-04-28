@@ -1,6 +1,6 @@
 import { DIService } from "../../services/dependency-injection.service";
 import { injectable, inject } from "inversify";
-import { ICommandHandler } from "../../cqrs/ihandler";
+import { ICommandHandler } from "../../cqrs/icommand.handler";
 import { ICommand } from "../../cqrs/icommand";
 
 enum ServiceScope {
